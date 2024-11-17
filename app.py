@@ -469,18 +469,27 @@ class CodeTalkApp:
     .stMarkdown, p, h1, h2, h3 {
         color: white !important;
     }
-    .app-bg{
-        
-        left:-30px;
-        background-color:rgba(16,16,16,0.7);
-        position:absolute;
-        z-index: 0;
-        height: 200vh;
-        width: calc(100% + 60px);
-        border-radius: 25px;
-        box-shadow: 0 -8px 16px 4px rgba(0, 0, 0, 0.2), 0 -10px 30px 6px rgba(0, 0, 0, 0.19);
-
-        }
+    .app-bg {
+    left: -30px;
+    background: linear-gradient(
+        145deg,
+        rgba(22, 22, 22, 0.8) 0%,
+        rgba(16, 16, 16, 0.85) 50%,
+        rgba(10, 10, 10, 0.9) 100%
+    );
+    position: absolute;
+    z-index: 0;
+    height: 200vh;
+    width: calc(100% + 60px);
+    border-radius: 25px;
+    box-shadow: 
+        0 -8px 20px 6px rgba(0, 0, 0, 0.25),
+        0 -15px 35px 8px rgba(0, 0, 0, 0.22),
+        0 5px 15px rgba(0, 0, 0, 0.15) inset,
+        0 -5px 15px rgba(255, 255, 255, 0.05) inset;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
         header {visibility: hidden;}
 </style>
         """, unsafe_allow_html=True)
