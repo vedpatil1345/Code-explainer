@@ -471,8 +471,7 @@ header {
 .app-bg {
     position: absolute;
     top: 0;
-    left: 25px;
-    right:25px;
+    left: 10%;
     width: 80%;
     height: 100%;
     background: linear-gradient(
