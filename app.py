@@ -309,7 +309,7 @@ class CodeTalkApp:
             
             # Chat input
             user_message = st.text_input("Ask about the error...")
-            if st.button("Send") and user_message:
+            if st.button("Ask") and user_message:
                 # Add user message to history
                 st.session_state.error_chat_history.append(Message(user_message, is_bot=False))
                 
