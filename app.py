@@ -304,7 +304,7 @@ class CodeTalkApp:
                 st.session_state.error_chat_history = []
                 
             for message in st.session_state.error_chat_history:
-                with st.chat_message("assistant" if message.is_bot else "user"):
+                with st.text_input("assistant" if message.is_bot else "user"):
                     st.markdown(message.content)
             
             # Chat input
