@@ -308,8 +308,8 @@ class CodeTalkApp:
                     st.markdown(message.content)
             
             # Chat input
-            user_message = st.text_input("Ask about the error...")
-            if st.button("Ask") and user_message:
+            user_message = st.chat_input("Ask about the error...")
+            if user_message:
                 # Add user message to history
                 st.session_state.error_chat_history.append(Message(user_message, is_bot=False))
                 
@@ -393,8 +393,8 @@ class CodeTalkApp:
             st.write(f"{'🤖 Bot:' if message.is_bot else '👤 You:'} {message.content}")
         
         # Chat input
-        user_message = st.text_input("Ask a question about your code:")
-        if st.button("Send") and user_message:
+        user_message = st.chat_input("Ask a question about your code:")
+        if user_message:
             # Include current code context in the chat
             context = f"Given this code:\n\n{st.session_state.current_code}\n\nUser question: {user_message}"
             self.handle_chat_message(context)
