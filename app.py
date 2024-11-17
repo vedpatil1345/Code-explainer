@@ -482,11 +482,6 @@ class CodeTalkApp:
     height: 200vh;
     width: calc(100% + 60px);
     border-radius: 25px;
-    box-shadow: 
-        0 -8px 16px rgba(0, 0, 0, 0.3),
-        0 -12px 24px rgba(0, 0, 0, 0.2),
-        0 4px 12px rgba(0, 0, 0, 0.1) inset,
-        0 -4px 12px rgba(255, 255, 255, 0.02) inset;
     border: 1px solid rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(2px);
 }
