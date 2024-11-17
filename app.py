@@ -312,7 +312,7 @@ class CodeTalkApp:
             if st.button("Ask") and user_message:
                 # Add user message to history
                 st.session_state.error_chat_history.append(Message(user_message, is_bot=False))
-                 st.session_state.user_message = ""
+                st.session_state.user_message = ""
                 
                 # Generate context-aware response
                 error_context = f"""
