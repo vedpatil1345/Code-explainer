@@ -433,7 +433,7 @@ class CodeTalkApp:
         justify-content: space-between;
         align-items: center;
         border-radius: 15px;
-        
+        filter: blur(20px);
 ;
     }
 
