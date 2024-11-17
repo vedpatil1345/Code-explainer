@@ -386,7 +386,7 @@ class CodeTalkApp:
         }
     
     def render_chat_interface(self):
-        st.header("Chat with Code")
+        st.header("Chat About The Code")
         
         # Display chat history
         for message in st.session_state.chat_history:
