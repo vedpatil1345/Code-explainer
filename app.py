@@ -433,7 +433,8 @@ class CodeTalkApp:
             left: -30px;
             position: absolute;
             z-index: -1;
-            height: 200vh;
+            top: 0;
+            bottom: 0;
             width: calc(100% + 60px);
             display: flex;
             justify-content: space-between;
@@ -489,7 +490,8 @@ class CodeTalkApp:
             );
             position: absolute;
             z-index: 0;
-            height: 200vh;
+            top: 0;
+            bottom: 0;
             width: calc(100% + 60px);
             border-radius: 25px;
             border: 1px solid rgba(255, 255, 255, 0.1);
