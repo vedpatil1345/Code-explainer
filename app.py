@@ -312,6 +312,7 @@ class CodeTalkApp:
             if st.button("Ask") and user_message:
                 # Add user message to history
                 st.session_state.error_chat_history.append(Message(user_message, is_bot=False))
+                 st.session_state.user_message = ""
                 
                 # Generate context-aware response
                 error_context = f"""
@@ -395,9 +396,12 @@ class CodeTalkApp:
         # Chat input
         user_message = st.text_input("Ask a question about your code:")
         if st.button("Send") and user_message:
+            
             # Include current code context in the chat
             context = f"Given this code:\n\n{st.session_state.current_code}\n\nUser question: {user_message}"
+             
             self.handle_chat_message(context)
+            st.session_state.user_message = ""
             st.rerun()
     
     def handle_chat_message(self, message: str):
