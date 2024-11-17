@@ -121,9 +121,9 @@ class CodeAnalyzer:
     def analyze_code(self, code: str, language: str) -> Dict[str, str]:
         """Analyze code with caching for improved performance"""
         return {
-            '👨🏻‍💻 Code-Explanation': self.explain_code(code, language),
+            '👨🏻‍💻Code-Explanation': self.explain_code(code, language),
             '📋Requirements Analysis': self.get_requirements(code),
-            '⚠Error Detection': self.get_error(code, language),
+            '⚠ Error Detection': self.get_error(code, language),
             '💪Code Improvement': self.get_improvements(code, language)
         }
     
