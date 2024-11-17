@@ -487,7 +487,7 @@ class CodeTalkApp:
         0 -15px 35px 8px rgba(0, 0, 0, 0.22),
         0 5px 15px rgba(0, 0, 0, 0.15) inset,
         0 -5px 15px rgba(255, 255, 255, 0.05) inset;
-    filter: blur(25px);
+    filter: blur(5px);
 
 }
         header {visibility: hidden;}
