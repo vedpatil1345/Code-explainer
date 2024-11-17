@@ -482,7 +482,7 @@ class CodeTalkApp:
     height: 200vh;
     width: calc(100% + 60px);
     border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(2px);
 }
         header {visibility: hidden;}
