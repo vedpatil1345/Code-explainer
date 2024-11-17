@@ -265,11 +265,9 @@ class CodeTalkApp:
             self.render_chat_interface()
     
     def render_error_tab(self):
-        st.header("Error Explainer")
-        
         # Split into two columns
         error_col, chat_col = st.columns([1, 1])
-        
+        st.header("Error Explainer")
         with error_col:
             error_input = st.text_area("Paste your error message here:", height=100)
             st.markdown("### original Code(Optional)")
