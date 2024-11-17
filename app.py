@@ -306,12 +306,15 @@ class CodeTalkApp:
             for message in st.session_state.error_chat_history:
                 with st.chat_message("assistant" if message.is_bot else "user"):
                     st.markdown(message.content)
-            
+            input_placeholder = st.empty()
             # Chat input
-            user_message = st.text_input("Ask about the error...")
+            user_message = input_placeholder.text_input("Ask about the error...")
             if st.button("Ask") and user_message:
                 # Add user message to history
                 st.session_state.error_chat_history.append(Message(user_message, is_bot=False))
+                # Clear the text input by re-rendering the placeholder
+                input_placeholder.empty()  # Clear the input field
+                input_placeholder.text_input("Ask about the error...", value="")
                 
                 
                 # Generate context-aware response
@@ -392,14 +395,15 @@ class CodeTalkApp:
         # Display chat history
         for message in st.session_state.chat_history:
             st.write(f"{'🤖 Bot:' if message.is_bot else '👤 You:'} {message.content}")
-        
+        input_placeholder = st.empty()
         # Chat input
-        user_message = st.text_input("Ask a question about your code:")
+        user_message = input_placeholder.text_input("Ask a question about your code:")
         if st.button("Send") and user_message:
             
             # Include current code context in the chat
             context = f"Given this code:\n\n{st.session_state.current_code}\n\nUser question: {user_message}"
-             
+            input_placeholder.empty()  # Clear the input field
+            input_placeholder.text_input("Ask about the error...", value="") 
             self.handle_chat_message(context)
             
             st.rerun()
