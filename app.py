@@ -268,7 +268,7 @@ class CodeTalkApp:
         st.header("Error Explainer")
         
         # Split into two columns
-        chat_col,error_col  = st.columns([1, 1])
+        error_col, chat_col = st.columns([1, 1])
         
         with error_col:
             error_input = st.text_area("Paste your error message here:", height=100)
