@@ -473,9 +473,9 @@ class CodeTalkApp:
     left: -30px;
     background: linear-gradient(
         145deg,
-        rgb(18, 18, 20) 0%,
-        rgb(22, 22, 24) 40%,
-        rgb(16, 16, 18) 100%
+        rgba(39, 39, 89, 0.75) 0%,
+        rgba(35, 35, 82, 0.8) 40%,
+        rgba(32, 32, 77, 0.85) 100%
     );
     position: absolute;
     z-index: 0;
@@ -483,11 +483,12 @@ class CodeTalkApp:
     width: calc(100% + 60px);
     border-radius: 25px;
     box-shadow: 
-        0 -8px 16px rgba(0, 0, 0, 0.8),
-        0 -12px 24px rgba(0, 0, 0, 0.6),
-        0 4px 12px rgba(0, 0, 0, 0.3) inset,
-        0 -4px 12px rgba(255, 255, 255, 0.03) inset;
-    border: 1px solid rgba(255, 255, 255, 0.07);
+        0 -8px 16px rgba(0, 0, 0, 0.3),
+        0 -12px 24px rgba(0, 0, 0, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.1) inset,
+        0 -4px 12px rgba(255, 255, 255, 0.02) inset;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(2px);
 }
         header {visibility: hidden;}
 </style>
