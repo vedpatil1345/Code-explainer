@@ -463,7 +463,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    filter: blur(20px);
+    filter: blur(25px);
     z-index: 0;
 }
 
@@ -473,7 +473,7 @@ header {
     top: 0;
     left: 25px;
     right:25px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     background: linear-gradient(
         145deg,
