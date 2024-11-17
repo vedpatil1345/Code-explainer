@@ -470,8 +470,6 @@ header {
 /* Background gradient overlay */
 .app-bg {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 90%;
     height: 100%;
     background: linear-gradient(
