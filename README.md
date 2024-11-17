@@ -37,7 +37,7 @@ Try out CodeTalk at: [https://code-explainer-107.streamlit.app](https://code-exp
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/vedpatil1345/Code-explainer.git
 cd codetalk
 ```
 
