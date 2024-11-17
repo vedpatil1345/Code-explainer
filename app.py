@@ -440,7 +440,7 @@ class CodeTalkApp:
 
     .stApp {
         top:-70px;
-        background-color:rgba(192,192,192,0.4);
+        background-color:rgba(0,0,0,0.4);
         z-index: 2;
         left:30px;
         right:30px;
@@ -473,9 +473,9 @@ class CodeTalkApp:
     left: -30px;
     background: linear-gradient(
         145deg,
-        rgba(32, 32, 32, 0.75) 0%,
-        rgba(32, 32, 32, 0.8) 40%,
-        rgba(32, 32, 32, 0.85) 100%
+        rgba(64, 64, 64, 0.75) 0%,
+        rgba(64, 64, 64, 0.8) 40%,
+        rgba(64, 64, 64, 0.85) 100%
     );
     position: absolute;
     z-index: 0;
