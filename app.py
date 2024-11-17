@@ -410,10 +410,6 @@ class CodeTalkApp:
             message=message
         )
         st.session_state.chat_history.append(Message(response, is_bot=True))
-    
-    def run(self):
-        st.set_page_config(page_title="CodeTalk", layout="wide")
-        
         
         # Add custom styling
     def run(self):
