@@ -520,11 +520,7 @@ header {
         /* Text color for all markdown and headings */
         .stMarkdown, p, h1, h2, h3 {
             color: white !important;
-        }
-        
-
-       
-        
+        }   
     </style>
         """, unsafe_allow_html=True)
 
