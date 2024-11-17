@@ -480,6 +480,7 @@ header {
         rgba(64, 64, 64, 0.65) 40%,
         rgba(64, 64, 64, 0.70) 100%
     );
+    align-self: center;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 25px;
