@@ -238,7 +238,7 @@ class CodeTalkApp:
                 st.session_state[key] = default_value
     
     def render_code_analysis_tab(self):
-        chat_col, code_col = st.columns([1, 1])
+        code_col, chat_col = st.columns([1, 1])
         
         with code_col:
             st.header("Code Analysis")
@@ -268,7 +268,7 @@ class CodeTalkApp:
         st.header("Error Explainer")
         
         # Split into two columns
-        error_col, chat_col = st.columns([1, 1])
+        chat_col,error_col  = st.columns([1, 1])
         
         with error_col:
             error_input = st.text_area("Paste your error message here:", height=100)
