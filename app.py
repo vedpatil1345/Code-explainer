@@ -471,7 +471,8 @@ header {
 .app-bg {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 25px;
+    right:25px;
     width: 100%;
     height: 100%;
     background: linear-gradient(
@@ -481,6 +482,7 @@ header {
         rgba(64, 64, 64, 0.70) 100%
     );
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
     backdrop-filter: blur(2px);
     z-index: 1;
 }
