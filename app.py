@@ -389,7 +389,7 @@ class CodeTalkApp:
         st.header("Chat About The Code")
         
         # Display chat history
-        for message in st.session_state.error_chat_history:
+        for message in st.session_state.chat_history:
             with st.chat_message("assistant" if message.is_bot else "user"):
                 st.markdown(message.content)
         
