@@ -403,7 +403,7 @@ class CodeTalkApp:
             # Include current code context in the chat
             context = f"Given this code:\n\n{st.session_state.current_code}\n\nUser question: {user_message}"
             input_placeholder.empty()  # Clear the input field
-            input_placeholder.text_input("Ask about the error...", value="") 
+            input_placeholder.text_input("Ask a question about your code:", value="") 
             self.handle_chat_message(context)
             
             st.rerun()
