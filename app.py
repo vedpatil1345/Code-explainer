@@ -299,7 +299,7 @@ class CodeTalkApp:
                     st.markdown(analysis['resources'])
         
         with chat_col:
-            st.subheader("Chat about the Error")
+            st.header("Chat about the Error")
             # Display error-specific chat history
             if 'error_chat_history' not in st.session_state:
                 st.session_state.error_chat_history = []
