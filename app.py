@@ -423,73 +423,98 @@ class CodeTalkApp:
         st.markdown("""
         
 <style>
-    .animation {
-        left:-30px;
-        position:absolute;
-        z-index: -1;
-        height: 200vh;
-        width: calc(100% + 60px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 15px;
-        filter: blur(20px);
-;
-    }
-
-    .stApp {
-        top:-70px;
-        background-color:rgba(0,0,0,0.4);
-        z-index: 2;
-        left:30px;
-        right:30px;
+        /* Hide Streamlit header */
+        header {
+            visibility: hidden;
+        }
         
-    }
+        /* Background iframe styling */
+        .animation {
+            left: -30px;
+            position: absolute;
+            z-index: -1;
+            height: 200vh;
+            width: calc(100% + 60px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 15px;
+            filter: blur(20px);
+        }
+        
+        /* Main app container */
+        .stApp {
+            top: -70px;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+            left: 30px;
+            right: 30px;
+        }
+        
+        /* Custom container styling */
+        .css-1d391kg, .css-1n76uvr {
+            background-color: rgba(0, 0, 0, 0.45);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Input fields styling */
+        .stTextInput input, .stTextArea textarea {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Button styling */
+        .stButton button {
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+        }
+        
+        /* Text color for all markdown and headings */
+        .stMarkdown, p, h1, h2, h3 {
+            color: white !important;
+        }
+        
+        /* Background gradient overlay */
+        .app-bg {
+            left: -30px;
+            background: linear-gradient(
+                145deg,
+                rgba(64, 64, 64, 0.60) 0%,
+                rgba(64, 64, 64, 0.65) 40%,
+                rgba(64, 64, 64, 0.70) 100%
+            );
+            position: absolute;
+            z-index: 0;
+            height: 200vh;
+            width: calc(100% + 60px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(2px);
+        }
 
-    .css-1d391kg, .css-1n76uvr {
-        background-color: rgba(0, 0, 0, 0.45);
-        border-radius: 10px;
-        padding: 20px;
-        backdrop-filter: blur(10px);
-    }
-
-    .stTextInput input, .stTextArea textarea {
-        background-color: rgba(255, 255, 255, 0.05);
-        color: white;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .stButton button {
-        background-color: #4a4a4a;
-        color: white;
-        border: none;
-    }
-
-    .stMarkdown, p, h1, h2, h3 {
-        color: white !important;
-    }
-    .app-bg {
-    left: -30px;
-    background: linear-gradient(
-        145deg,
-        rgba(64, 64, 64, 0.60) 0%,
-        rgba(64, 64, 64, 0.65) 40%,
-        rgba(64, 64, 64, 0.70) 100%
-    );
-    position: absolute;
-    z-index: 0;
-    height: 200vh;
-    width: calc(100% + 60px);
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
-}
-        header {visibility: hidden;}
-</style>
+        /* Additional fixes for iframe integration */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Ensure proper stacking of elements */
+        .wrapper {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+        }
+    </style>
         """, unsafe_allow_html=True)
 
             
-        st.markdown("""<div class="app-bg"></div>""",unsafe_allow_html=True)
+        st.markdown("""<div class="wrapper"><div class="app-bg"></div>""",unsafe_allow_html=True)
         st.markdown("""<iframe class="animation" src="https://melodic-kataifi-1ba173.netlify.app"></iframe>""",unsafe_allow_html=True)
         st.markdown("# CodeTalk")
     
@@ -504,7 +529,7 @@ class CodeTalkApp:
             self.render_code_analysis_tab()
         with tab2:
             self.render_error_tab()
-        
+        st.markdown("""</div>""",unsafe_allow_html=True)
 
 if __name__ == "__main__":
     app = CodeTalkApp()
