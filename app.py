@@ -457,7 +457,7 @@ header {
             top: 0;
             left: 0;
             right: 0;
-            height: 30px;
+            height: 60px;
             background: linear-gradient(to bottom,
                 rgba(64, 64, 64, 0.8) 0%,
                 rgba(64, 64, 64, 0.5) 50%,
