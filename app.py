@@ -423,25 +423,68 @@ class CodeTalkApp:
         st.markdown("""
         
 <style>
-        /* Hide Streamlit header */
-        header {
-            visibility: hidden;
-        }
-        
-        /* Background iframe styling */
-        .animation {
-            left: -30px;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            bottom: 0;
-            width: calc(100% + 60px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 15px;
-            filter: blur(20px);
-        }
+        /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Hide Streamlit header */
+header {
+    visibility: hidden;
+}
+
+/* Background layers container */
+.background-container {
+    position: fixed;  /* Changed to fixed to cover full viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Background animation layer */
+.animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: blur(20px);
+    z-index: 0;
+}
+
+/* Background gradient overlay */
+.app-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        145deg,
+        rgba(64, 64, 64, 0.60) 0%,
+        rgba(64, 64, 64, 0.65) 40%,
+        rgba(64, 64, 64, 0.70) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
         
         /* Main app container */
         .stApp {
@@ -479,45 +522,15 @@ class CodeTalkApp:
             color: white !important;
         }
         
-        /* Background gradient overlay */
-        .app-bg {
-            left: -30px;
-            background: linear-gradient(
-                145deg,
-                rgba(64, 64, 64, 0.60) 0%,
-                rgba(64, 64, 64, 0.65) 40%,
-                rgba(64, 64, 64, 0.70) 100%
-            );
-            position: absolute;
-            z-index: 0;
-            top: 0;
-            bottom: 0;
-            width: calc(100% + 60px);
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(2px);
-        }
 
-        /* Additional fixes for iframe integration */
-        html, body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+       
         
-        /* Ensure proper stacking of elements */
-        .wrapper {
-            position: relative;
-            min-height: 100vh;
-            width: 100%;
-        }
     </style>
         """, unsafe_allow_html=True)
 
             
-        st.markdown("""<div class="wrapper"><div class="app-bg"></div>""",unsafe_allow_html=True)
-        st.markdown("""<iframe class="animation" src="https://melodic-kataifi-1ba173.netlify.app"></iframe>""",unsafe_allow_html=True)
+        st.markdown("""<div class="background-container"><iframe class="animation" src="https://melodic-kataifi-1ba173.netlify.app"></iframe><div class="app-bg"></div></div>""",unsafe_allow_html=True)
+        
         st.markdown("# CodeTalk")
     
     # Rest of your code...
