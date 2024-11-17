@@ -389,8 +389,9 @@ class CodeTalkApp:
         st.header("Chat About The Code")
         
         # Display chat history
-        for message in st.session_state.chat_history:
-            st.write(f"{'🤖 Bot:' if message.is_bot else '👤 You:'} {message.content}")
+        for message in st.session_state.error_chat_history:
+            with st.chat_message("assistant" if message.is_bot else "user"):
+                st.markdown(message.content)
         
         # Chat input
         user_message = st.chat_input("Ask a question about your code:")
