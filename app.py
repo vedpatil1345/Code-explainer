@@ -304,12 +304,12 @@ class CodeTalkApp:
                 st.session_state.error_chat_history = []
                 
             for message in st.session_state.error_chat_history:
-                with st.text_input("assistant" if message.is_bot else "user"):
+                with st.chat_message("assistant" if message.is_bot else "user"):
                     st.markdown(message.content)
             
             # Chat input
-            user_message = st.chat_input("Ask about the error...")
-            if user_message:
+            user_message = st.text_input("Ask about the error...")
+            if st.button("Send") and user_message:
                 # Add user message to history
                 st.session_state.error_chat_history.append(Message(user_message, is_bot=False))
                 
