@@ -472,7 +472,7 @@ header {
     position: absolute;
     top: 0;
     left: 10%;
-    width: 80%;
+    width: 100%;
     height: 100%;
     background: linear-gradient(
         145deg,
