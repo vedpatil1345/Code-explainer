@@ -452,7 +452,20 @@ header {
     height: 100vh;
     z-index: -1;
 }
-
+.top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(to bottom,
+                rgba(64, 64, 64, 0.8) 0%,
+                rgba(64, 64, 64, 0.5) 50%,
+                rgba(64, 64, 64, 0) 100%);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 1000;
+        }
 /* Background animation layer */
 .animation {
     position: absolute;
@@ -469,7 +482,7 @@ header {
 /* Background gradient overlay */
 .app-bg {
     position: absolute;
-    top: 25px;
+    top: 50px;
     left: 30px;
     right:30px;
     height: 100%;
@@ -490,7 +503,7 @@ header {
         
         /* Main app container */
         .stApp {
-            top: -70px;
+            top: -50px;
             background-color: rgba(0, 0, 0, 0.4);
             z-index: 2;
             left: 30px;
@@ -527,7 +540,7 @@ header {
         """, unsafe_allow_html=True)
 
             
-        st.markdown("""<div class="background-container"><iframe class="animation" src="https://melodic-kataifi-1ba173.netlify.app"></iframe><div class="app-bg"></div></div>""",unsafe_allow_html=True)
+        st.markdown("""<div class="top-bar"></div><div class="background-container"><iframe class="animation" src="https://melodic-kataifi-1ba173.netlify.app"></iframe><div class="app-bg"></div></div>""",unsafe_allow_html=True)
         
         st.markdown("# CodeTalk")
     
