@@ -440,7 +440,7 @@ class CodeTalkApp:
 
     .stApp {
         top:-70px;
-        background-color:rgba(255,255,255,0.6);
+        background-color:rgba(192,192,192,0.4);
         z-index: 2;
         left:30px;
         right:30px;
