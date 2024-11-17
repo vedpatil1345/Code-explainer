@@ -1,0 +1,5 @@
+streamlit>=1.0.0
+langchain-groq
+langchain-core
+execjs
+python-dotenv
