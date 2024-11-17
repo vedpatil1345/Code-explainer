@@ -463,7 +463,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    filter: blur(25px);
     z-index: 0;
 }
 
