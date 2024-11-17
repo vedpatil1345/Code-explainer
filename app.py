@@ -473,9 +473,9 @@ class CodeTalkApp:
     left: -30px;
     background: linear-gradient(
         145deg,
-        rgba(39, 39, 89, 0.75) 0%,
-        rgba(35, 35, 82, 0.8) 40%,
-        rgba(32, 32, 77, 0.85) 100%
+        rgba(32, 32, 32, 0.75) 0%,
+        rgba(32, 32, 32, 0.8) 40%,
+        rgba(32, 32, 32, 0.85) 100%
     );
     position: absolute;
     z-index: 0;
