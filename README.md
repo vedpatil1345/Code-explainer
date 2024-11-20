@@ -57,7 +57,8 @@ GROQ_API_KEY=your_api_key_here
 ```bash
 streamlit run app.py
 ```
-
+5. Add Groq API Key:
+   [![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot3.png)](https://code-explainer-107.streamlit.app)
 ## 💡 Usage
 
 ### Code Analysis Tab
