@@ -52,13 +52,13 @@ Create a `.env` file in the project root and add your Groq API key:
 ```
 GROQ_API_KEY=your_api_key_here
 ```
-
+Or Add Groq API Key when you run app first time:
+   [![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot3.png)](https://code-explainer-107.streamlit.app)
 4. Run the application:
 ```bash
 streamlit run app.py
 ```
-5. Add Groq API Key:
-   [![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot3.png)](https://code-explainer-107.streamlit.app)
+
 ## 💡 Usage
 
 ### Code Analysis Tab
