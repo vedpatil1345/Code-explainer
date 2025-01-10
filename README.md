@@ -1,7 +1,7 @@
 # CodeTalk 🤖
 
-[![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot1.png)](https://code-explainer-107.streamlit.app)
-[![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot2.png)](https://code-explainer-107.streamlit.app)
+[![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot1.png)](https://codetalk.streamlit.app)
+[![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot2.png)](https://codetalk.streamlit.app)
 
 CodeTalk is an interactive code analysis and error explanation tool powered by LLM technology. It helps developers understand, debug, and improve their code through intelligent analysis and natural language conversation.
 
@@ -53,7 +53,7 @@ Create a `.env` file in the project root and add your Groq API key:
 GROQ_API_KEY=your_api_key_here
 ```
 Or Add Groq API Key when you run app first time:
-   [![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot3.png)](https://code-explainer-107.streamlit.app)
+   [![Streamlit App](https://github.com/vedpatil1345/Code-explainer/blob/main/screenshot3.png)](https://codetalk.streamlit.app)
   
 4. Run the application:
 ```bash
